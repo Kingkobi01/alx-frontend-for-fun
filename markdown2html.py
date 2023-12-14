@@ -21,12 +21,13 @@ def parse_heading(string):
             closing_tag = f"</{heading[i]}>"
             actual_sentence = string.replace(i, "")
 
-    return f"{open_tag}{actual_sentence}{closing_tag}"
+            return f"{open_tag}{actual_sentence}{closing_tag}\n"
 
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
+        print("Usage: ./markdown2html.py README.md README.html",
+              file=sys.stderr)
         sys.exit(1)
 
     md_file, html_file = sys.argv[1:]
@@ -37,9 +38,12 @@ if __name__ == "__main__":
 
     with open(md_file, "r") as md_str:
         md_str_list = md_str.readlines()
+        html_result_list = []
 
         md_str_list = [line.replace("\n", "") for line in md_str_list]
+        for line in md_str_list:
+            line = parse_heading(line)
+            html_result_list.append(line)
+
         with open(html_file, "w") as html:
-            for line in md_str_list:
-                line = parse_heading(line)
-                html.write(line + "\n")
+            html.writelines(html_result_list)

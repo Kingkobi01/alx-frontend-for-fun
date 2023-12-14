@@ -31,7 +31,7 @@ if __name__ == "__main__":
 
     md_file, html_file = sys.argv[1:]
 
-    if not os.path.exists(md_file):
+    if not os.path.exists(md_file) and not os.path.isfile(md_file):
         print("Missing <filename>", file=sys.stderr)
         sys.exit(1)
 

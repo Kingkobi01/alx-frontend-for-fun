@@ -26,12 +26,14 @@ def parse_heading(string):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        sys.exit("Usage: ./markdown2html.py README.md README.html")
+        print("Usage: ./markdown2html.py README.md README.html", file=sys.stderr)
+        sys.exit(1)
 
     md_file, html_file = sys.argv[1:]
 
     if not os.path.exists(md_file):
-        sys.exit("Missing <filename>")
+        print("Missing <filename>", file=sys.stderr)
+        sys.exit(1)
 
     with open(md_file, "r") as md_str:
         md_str_list = md_str.readlines()

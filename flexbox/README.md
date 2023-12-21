@@ -8,3 +8,4 @@
 * [Flexify the header](./5-index.html)
 * [Flexify the navbar](./6-styles.css)
 * [Align center logo and navbar](./7-styles.css)
+* [Simplify the hero banner](./8-styles.css)

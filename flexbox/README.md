@@ -6,3 +6,4 @@
 * [Simplify services list](./3-styles.css)
 * [Playing around with the spacing between flex service items](./4-styles.css)
 * [Flexify the header](./5-index.html)
+* [Flexify the navba](./6-styles.css)

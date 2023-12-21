@@ -5,8 +5,11 @@
     --box-4-color: #9d54b9;
     --box-5-color: #e28400;
     --small-font-size: 2rem;
+    --small-flex-basis: 10%;
     --medium-font-size: 4rem;
+    --medium-flex-basis: 20%;
     --large-font-size: 6rem;
+    --large-flex-basis: 30%;
 }
 
 *::after,
@@ -32,30 +35,30 @@
 
 .box1 {
     background-color: var(--box-1-color);
-    flex-basis: 5%;
+    flex-basis: var(--small-flex-basis);
     font-size: var(--small-font-size);
 }
 
 .box2 {
     background-color: var(--box-2-color);
-    flex-basis: 15%;
+    flex-basis: var(--medium-flex-basis);
     font-size: var(--medium-font-size);
 }
 
 .box3 {
     background-color: var(--box-3-color);
-    flex-basis: 30%;
+    flex-basis: var(--large-flex-basis);
     font-size: var(--large-font-size);
 }
 
 .box4 {
     background-color: var(--box-4-color);
-    flex-basis: 15%;
+    flex-basis: var(--medium-flex-basis);
     font-size: var(--medium-font-size);
 }
 
 .box5 {
     background-color: var(--box-5-color);
-    flex-basis: 5%;
+    flex-basis: var(--small-flex-basis);
     font-size: var(--small-font-size);
 }

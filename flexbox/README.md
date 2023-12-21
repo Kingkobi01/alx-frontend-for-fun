@@ -10,3 +10,4 @@
 * [Align center logo and navbar](./7-styles.css)
 * [Simplify the hero banner](./8-styles.css)
 * [Better alignment about us](./9-styles.css)
+* [Creating an article by fixing issues and updating hero styles](./10-styles.css)

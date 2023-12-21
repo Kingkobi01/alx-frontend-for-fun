@@ -1,0 +1,61 @@
+:root {
+    --box-1-color: #1ece6d;
+    --box-2-color: #2c9dec;
+    --box-3-color: #2f495f;
+    --box-4-color: #9d54b9;
+    --box-5-color: #e28400;
+    --small-font-size: 2rem;
+    --medium-font-size: 4rem;
+    --large-font-size: 6rem;
+}
+
+*::after,
+*::before,
+* {
+    box-sizing: border-box;
+
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: serif;
+    color: white;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box1 {
+    background-color: var(--box-1-color);
+    flex-basis: 5%;
+    font-size: var(--small-font-size);
+}
+
+.box2 {
+    background-color: var(--box-2-color);
+    flex-basis: 15%;
+    font-size: var(--medium-font-size);
+}
+
+.box3 {
+    background-color: var(--box-3-color);
+    flex-basis: 30%;
+    font-size: var(--large-font-size);
+}
+
+.box4 {
+    background-color: var(--box-4-color);
+    flex-basis: 15%;
+    font-size: var(--medium-font-size);
+}
+
+.box5 {
+    background-color: var(--box-5-color);
+    flex-basis: 5%;
+    font-size: var(--small-font-size);
+}

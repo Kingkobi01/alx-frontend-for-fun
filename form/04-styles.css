@@ -879,10 +879,11 @@ input[type="email"],
 textarea {
     position: relative;
     width: 100%;
-    padding: 1.3rem;
+    padding: 1.2rem;
     line-height: 1;
-    border: .1rem --color-black;
+    border: .1rem solid var(--color-black);
     background-color: var(--color-white);
+    box-shadow: none;
     outline: 0;
 }
 

@@ -1,0 +1,90 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    opacity: 0;
+}
+
+.menu-open-button {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+    gap: calc(2rem/5 + 0.2rem);
+    padding: 2rem;
+    margin: 1rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: scale(1.25);
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+}
+
+.menu-open-button:hover,
+.menu-open:checked~.menu-open-button {
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+
+.menu-line {
+    width: 2rem;
+    height: 3px;
+    border-radius: 5px;
+    background-color: white;
+    transition: transform 0.5s;
+}
+
+.menu-item {
+    visibility: hidden;
+    color: white;
+    background: red;
+    padding: 2rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+
+    &:hover {
+        box-shadow: 0 0 0 1px red;
+        background: white;
+        color: red;
+    }
+}
+
+.menu-open:checked~.menu-item {
+    visibility: visible;
+}
+
+
+.menu-open:checked+.menu-open-button .menu-line:nth-of-type(1) {
+    transform: rotate(45deg) translateY(calc(2rem/5 + 0.2rem)) translateX(.5rem);
+
+}
+
+.menu-open:checked+.menu-open-button .menu-line:nth-of-type(2) {
+    opacity: 0;
+}
+
+.menu-open:checked+.menu-open-button .menu-line:nth-of-type(3) {
+    transform: rotate(-45deg)translateY(calc((2rem/5 + 0.2rem) * -1)) translateX(.5rem);
+
+}
